@@ -1,0 +1,13 @@
+http://www.netsparker.com/s/research/SVNDigger.zip
+
+SVNDigger.zip파일은 다음의 카테고리에 해당하는 알려진 디렉터리 이름, 파일 이름들에 대한 정보를 담은 텍스트(.txt) 파일을 가지고 있다.
+
+> Admin Files
+> Debugging
+> Error
+> Help / Readme
+> Index
+> Install / Setup
+> Log
+> Test
+
