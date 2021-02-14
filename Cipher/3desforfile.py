@@ -70,7 +70,7 @@ class myDES():
         hh.close()
             
 def main():
-    keytext = 'miki'
+    keytext = 'korea'
     ivtext = '0719'
     filename = 'text.txt'
     encfilename = filename+'.enc'

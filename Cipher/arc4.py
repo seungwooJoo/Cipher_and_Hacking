@@ -17,7 +17,7 @@ class myARC4():
 
     
 def main():
-    keytext = 'miki'
+    keytext = 'korea'
     msg='jooseungwoo'
     
     myCipher = myARC4(keytext)

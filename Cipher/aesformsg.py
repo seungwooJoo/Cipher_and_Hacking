@@ -45,7 +45,7 @@ class myAES():
         return decmsg
     
 def main():
-    keytext = 'miki'
+    keytext = 'korea'
     ivtext = '190719'
     msg = 'jooseungwoo'
 
